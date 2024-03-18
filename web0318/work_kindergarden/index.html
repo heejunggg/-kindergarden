@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="container">
+        <div class="input-container">
+          <div class="input-box">
+            <input
+            type="radio"
+            name="gender"
+            value="before"
+            onclick="getGender(event)"
+            checked="checked"
+          />체험 전 조사
+          </div>
+        
+          <div class="input-box">
+          <input
+            type="radio"
+            name="gender"
+            value="after"
+            onclick="getGender(event)"
+          />체험 후 조사
+          </div>
+        </div>
+       
+      <ul id="menu">
+        <li>
+          <!-- <a href="javascript:void(0);" onclick="callFunction('미래아이');"
+            >미래아이</a> -->
+            <a href="list.html">미래아이</a>
+        </li>
+        <li>
+          <!-- <a href="javascript:void(0);" onclick="callFunction('생명아이');"
+            >생명아이</a -->
+            <a href="list.html">생명아이</a>
+          
+        </li>
+        <li>
+          <!-- <a href="javascript:void(0);" onclick="callFunction('세계아이');"
+            >세계아이</a
+          > -->
+          <a href="list.html">세계아이</a>
+        </li>
+        <li>
+          <!-- <a href="javascript:void(0);" onclick="callFunction('지혜아이');"
+            >지혜아이</a
+          > -->
+          <a href="list.html">지혜아이</a>
+        </li>
+        <li>
+          <!-- <a href="javascript:void(0);" onclick="callFunction('진리아이');"
+            >진리아이</a
+          > -->
+          <a href="list.html">진리아이</a>
+        </li>
+        <li>
+          <!-- <a href="javascript:void(0);" onclick="callFunction('평화아이');"
+            >평화아이</a
+          > -->
+          <a href="list.html">평화아이</a>
+        </li>
+        
+       
+      </ul>
+    </div> 
+  </div>
+
+      <script>
+        let before_after = "before";
+        function getGender(event) {
+          before_after = event.target.value;
+        }
+
+        function callFunction(ban) {
+          //alert("emotion_save.php?ban="+ban+"&before="+before_after);
+
+          // 현재 페이지를 상대 경로로 이동
+          window.location.href =
+            "student.php?ban=" + ban + "&before=" + before_after;
+          //window.close(); 부모창이 있을때만 가능
+        }
+      </script>
+    </body>
+  </body>
+</html>
